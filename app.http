@@ -1,0 +1,82 @@
+### 1.GET Todo whose status is 'TO DO' API
+GET http://localhost:3000/todos/?status=TO%20DO
+
+### 2.GET Todo whose priority is 'HIGH' API
+GET http://localhost:3000/todos/?priority=HIGH
+
+### 3.GET Todo whose priority is 'HIGH' and status is 'IN PROGRESS' API
+GET http://localhost:3000/todos/?status=IN%20PROGRESS&priority=HIGH
+
+### 4.GET Todos Whose Todo Contains 'Buy' API
+GET http://localhost:3000/todos/?search_q=Buy
+
+### 5.GET Todos Whose Category is 'WORK' and Status is 'DONE'
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+
+### 6.GET Todos Whose Category is 'HOME' API
+GET http://localhost:3000/todos/?category=HOME
+
+### 7.GET Todos Whose Category is 'LEARNING' and Priority is 'HIGH' API
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+### 8.GET Todo API
+GET http://localhost:3000/todos/1/
+
+### 9.GET Todos with a specific due date in the query parameter `/agenda/?date=2021-12-12` API
+GET http://localhost:3000/agenda/?date=2021-12-12
+
+### 10.Add Todo API
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
+}
+
+### 11.Update Todo Status API 
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json 
+
+{
+  "status": "DONE"
+}
+
+### 12.Update Todo Priority API 
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json 
+
+{
+  "priority": "HIGH"
+}
+
+### 13.Update Todo Todo Text API 
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json 
+
+{
+  "todo": "Clean the garden"
+}
+
+### 14.Update Todo Category API 
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json
+
+{
+  "category": "LEARNING"
+}
+
+### 14.Update Todo DueDate API 
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json
+
+{
+  "dueDate": "2021-01-12"
+}
+
+### 15.Delete Todo API 
+DELETE http://localhost:3000/todos/6/
